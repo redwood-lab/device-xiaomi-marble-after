@@ -117,6 +117,9 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 BOARD_KERNEL_IMAGE_NAME := Image
 
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_KERNEL_CONFIG := marble_defconfig
+
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
@@ -264,7 +267,7 @@ DEVICE_MANIFEST_UKEE_FILES := \
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(CONFIGS_PATH)/vintf/vendor_framework_compatibility_matrix.xml \
     $(CONFIGS_PATH)/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/afterlife/config/device_framework_matrix.xml
 ODM_MANIFEST_SKUS += marble
 ODM_MANIFEST_MARBLE_FILES := $(CONFIGS_PATH)/vintf/manifest_nfc.xml
 

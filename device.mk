@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Call the BCR setup
-$(call inherit-product-if-exists, vendor/bcr/bcr.mk)
+#$(call inherit-product-if-exists, vendor/bcr/bcr.mk)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -144,9 +144,9 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 # Camera
-TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT := true
-TARGET_INCLUDES_MIUI_CAMERA := true
-$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+#TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT := true
+#TARGET_INCLUDES_MIUI_CAMERA := true
+#$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.7.vendor \
